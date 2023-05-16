@@ -1,7 +1,7 @@
 {{- $ThemeVersion := "3.16.0" -}}
 <footer class="site-footer">
     <section class="copyright">
-        <i style="display:inline-block; transform: rotatey(180deg);">&copy;</i> 
+        <p style="display:inline-block; transform: rotatey(180deg);">&copy;</p> 
         {{ if and (.Site.Params.footer.since) (ne .Site.Params.footer.since (int (now.Format "2006"))) }}
             {{ .Site.Params.footer.since }} - 
         {{ end }}

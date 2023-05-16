@@ -1,1 +1,48 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+
+.article-content {
+    a {
+        text-decoration: none;
+        color: var(--accent-color);
+        box-shadow: 0px -2px 0px rgba(var(--link-background-color), var(--link-background-opacity)) inset;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--accent-color-darker);
+            box-shadow: 0px -10px 0px rgba(var(--link-background-color), var(--link-background-opacity-hover)) inset;
+        }
+    }
+}
+
+.widget--toc {
+    #TableOfContents {
+        max-height: 65vh;
+
+        ol,
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 10px;
+
+            & > ol,
+            & > ul {
+                margin-top: 10px;
+                padding-left: 10px;
+                margin-bottom: -5px;
+
+                & > li:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+// 选中
+::selection {
+    color: #fff;
+    background: #557697;
+}
+

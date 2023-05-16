@@ -1,4 +1,4 @@
-<script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.9/twikoo.all.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.10/twikoo.all.min.js"></script>
 <div id="tcomment"></div>
 <style>
     .twikoo {
@@ -38,6 +38,7 @@
 <script>
     twikoo.init({
         envId: '{{- .envId -}}',
+        GRAVATAR_CDN: 'gravatar.loli.net/avatar',
         el: '#tcomment',
         {{- with .region -}}
         region: '{{- . -}}',

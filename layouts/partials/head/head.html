@@ -1,26 +1,37 @@
-<meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 {{- $description := partialCached "data/description" . .RelPermalink -}}
-<meta name='description' content='{{ $description }}'>
-{{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
-
-{{- $title := partialCached "data/title" . .RelPermalink -}}
+<meta name="description" content="{{ $description }}" />
+{{ with .Params.Keywords }}<meta name="keywords" content="{{ delimit . ", "
+}}">{{ end }} {{- $title := partialCached "data/title" . .RelPermalink -}}
 <title>{{ $title }}</title>
 
-<link rel='canonical' href='{{ .Permalink }}'>
+<link rel="canonical" href="{{ .Permalink }}" />
 
-{{- partial "head/style.html" . -}}
-{{- partial "head/script.html" . -}}
-{{- partial "head/opengraph/include.html" . -}}
+{{- partial "head/style.html" . -}} {{- partial "head/script.html" . -}} {{-
+partial "head/opengraph/include.html" . -}} {{- range .AlternativeOutputFormats
+-}}
+<link
+  rel="{{ .Rel }}"
+  type="{{ .MediaType.Type }}"
+  href="{{ .Permalink | safeURL }}"
+/>
+{{- end -}} {{ with .Site.Params.favicon }}
+<link rel="shortcut icon" href="{{ . }}" />
+{{ end }} {{- template "_internal/google_analytics.html" . -}} {{- partial
+"head/custom.html" . -}}
 
-{{- range .AlternativeOutputFormats -}}
-    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
-{{- end -}}
+<!-- <link href="/css/prism-onedark.css" rel="stylesheet">
+<script src='/js/prism.js'></script> -->
 
-{{ with .Site.Params.favicon }}
-    <link rel="shortcut icon" href="{{ . }}" />
-{{ end }}
 
-{{- template "_internal/google_analytics.html" . -}}
-{{- partial "head/custom.html" . -}}
+<!-- <link
+  href="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css"
+  rel="stylesheet"
+/>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/es/languages/cpp.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script> -->

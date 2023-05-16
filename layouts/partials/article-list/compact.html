@@ -30,7 +30,8 @@
                         width="{{ $Width }}"
                         height="{{ $Height }}" 
                         alt="{{ .Title }}"
-                        loading="lazy">
+                        loading="lazy"
+                        style="border-radius: var(--card-border-radius);">
                 {{ else }}
                     <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
                 {{ end }}
