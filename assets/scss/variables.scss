@@ -118,7 +118,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
   --link-background-opacity: 0.5;
   --link-background-opacity-hover: 0.7;
 
-  --pre-background-color: #272822;
+  --pre-background-color: #282c34;
   --pre-text-color: #f8f8f2;
 
   --code-background-color: rgba(0, 0, 0, 0.12);
@@ -128,7 +128,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
   --tr-even-background-color: #efefee;
 
   &[data-scheme="dark"] {
-    --code-background-color: #272822;
+    --code-background-color: #282c34;
     --code-text-color: rgba(255, 255, 255, 0.9);
 
     --table-border-color: #717171;
@@ -162,7 +162,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
 [data-scheme="dark"] {
   --pre-text-color: #f8f8f2;
-  --pre-background-color: #272822;
+  --pre-background-color: #282c34;
   @import "partials/highlight/dark.scss";
 }
 

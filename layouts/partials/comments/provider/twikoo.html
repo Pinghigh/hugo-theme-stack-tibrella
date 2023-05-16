@@ -1,54 +1,55 @@
-<script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.10/twikoo.all.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/twikoo/1.6.16/twikoo.all.min.js"></script>
 <div id="tcomment"></div>
 <style>
-    .twikoo {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-    :root[data-scheme="dark"] {
-        --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
-        --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
-    }
-    .twikoo .el-input-group__prepend,
-    .twikoo .tk-action-icon,
-    .twikoo .tk-time,
-    .twikoo .tk-comments-count {
-        color: var(--twikoo-body-text-color);
-    }
-    .twikoo .el-input__inner,
-    .twikoo .el-textarea__inner,
-    .twikoo .tk-preview-container,
-    .twikoo .tk-content,
-    .twikoo .tk-nick,
-    .twikoo .tk-send {
-        color: var(--twikoo-body-text-color-main);
-    }
-    .twikoo .el-button{
-        color: var(--twikoo-body-text-color)!important;
-    }
-    .OwO .OwO-body {
-        background-color: var(--body-background) !important;
-        color: var(--body-text-color) !important;
-    }
+  .twikoo {
+    background-color: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+    padding: var(--card-padding);
+    color: var(--twikoo-body-text-color);
+  }
+  :root[data-scheme="dark"] {
+    --twikoo-body-text-color-main: rgba(255, 255, 255, 0.9);
+    --twikoo-body-text-color: rgba(255, 255, 255, 0.7);
+  }
+  .twikoo .el-input-group__prepend,
+  .twikoo .tk-action-icon,
+  .twikoo .tk-time,
+  .twikoo .tk-comments-count {
+    color: var(--twikoo-body-text-color);
+  }
+  .twikoo .el-input__inner,
+  .twikoo .el-textarea__inner,
+  .twikoo .tk-preview-container,
+  .twikoo .tk-content,
+  .twikoo .tk-nick,
+  .twikoo .tk-send {
+    color: var(--twikoo-body-text-color-main);
+  }
+  .twikoo .el-button {
+    color: var(--twikoo-body-text-color) !important;
+  }
+  .OwO .OwO-body {
+    background-color: var(--body-background) !important;
+    color: var(--body-text-color) !important;
+  }
 </style>
 
 {{- with .Site.Params.comments.twikoo -}}
 <script>
-    twikoo.init({
-        envId: '{{- .envId -}}',
-        GRAVATAR_CDN: 'gravatar.loli.net/avatar',
-        el: '#tcomment',
-        {{- with .region -}}
-        region: '{{- . -}}',
-        {{- end -}}
-        {{- with .path -}}
-        path: '{{- . -}}',
-        {{- end -}}
-        {{- with .lang -}}
-        lang: '{{- . -}}',
-        {{- end -}}
-    })
+  twikoo.init({
+      envId: '{{- .envId -}}',
+      GRAVATAR_CDN: 'gravatar.loli.net/avatar',
+      el: '#tcomment',
+      {{- with .region -}}
+      region: '{{- . -}}',
+      {{- end -}}
+      {{- with .path -}}
+      path: '{{- . -}}',
+      {{- end -}}
+      {{- with .lang -}}
+      lang: '{{- . -}}',
+      {{- end -}}
+  })
 </script>
 {{- end -}}
