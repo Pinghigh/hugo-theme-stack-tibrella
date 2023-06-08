@@ -1,242 +1,71 @@
-/*
-*   Style: one dark
-*   https://xyproto.github.io/splash/docs/onedark.html
-*/
-
-.bg {
-  color: #abb2bf;
-  background-color: #282c34;
-}
-.chroma {
-  color: #abb2bf;
-  background-color: #282c34;
-}
-.chroma .lnlinks {
-  outline: none;
-  text-decoration: none;
-  color: inherit;
-}
-.chroma .lntd {
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-.chroma .lntable {
-  border-spacing: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  width: 100%;
-  display: block;
-
-  > tbody {
+pre code.hljs {
     display: block;
-    width: 100%;
-    > tr {
-      display: flex;
-      width: 100%;
-      > td:last-child {
-        overflow-x: auto;
-      }
-    }
-  }
+    overflow-x: auto;
+    padding: 1em;
 }
-.chroma .hl {
-  display: block;
-  width: 100%;
-  background-color: #3d4148;
+code.hljs {
+    padding: 3px 5px;
 }
-.chroma .lnt {
-  white-space: pre;
-  -webkit-user-select: none;
-  user-select: none;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  color: #55595f;
+.hljs {
+    color: #abb2bf;
+    background: #282c34;
 }
-.chroma .ln {
-  white-space: pre;
-  -webkit-user-select: none;
-  user-select: none;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  color: #55595f;
+.hljs-comment,
+.hljs-quote {
+    color: #5c6370;
+    font-style: italic;
 }
-.chroma .line {
-  display: flex;
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+    color: #c678dd;
 }
-.chroma .k {
-  color: #c678dd;
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+    color: #e06c75;
 }
-.chroma .kc {
-  color: #e5c07b;
+.hljs-literal {
+    color: #56b6c2;
 }
-.chroma .kd {
-  color: #c678dd;
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+    color: #98c379;
 }
-.chroma .kn {
-  color: #c678dd;
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+    color: #d19a66;
 }
-.chroma .kp {
-  color: #c678dd;
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+    color: #61aeee;
 }
-.chroma .kr {
-  color: #c678dd;
+.hljs-built_in,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+    color: #e6c07b;
 }
-.chroma .kt {
-  color: #c678dd;
+.hljs-emphasis {
+    font-style: italic;
 }
-.chroma .n {
-  color: #abb2bf;
+.hljs-strong {
+    font-weight: 700;
 }
-.chroma .na {
-  color: #e06c75;
-}
-.chroma .nb {
-  color: #e5c07b;
-}
-.chroma .bp {
-  color: #e06c75;
-}
-.chroma .nc {
-  color: #e5c07b;
-}
-.chroma .no {
-  color: #e06c75;
-}
-.chroma .nd {
-  color: #61afef;
-}
-.chroma .ni {
-  color: #e06c75;
-}
-.chroma .ne {
-  color: #e06c75;
-}
-.chroma .nf {
-  color: #61afef;
-}
-.chroma .fm {
-  color: #56b6c2;
-}
-.chroma .nl {
-  color: #e06c75;
-}
-.chroma .nn {
-  color: #e06c75;
-}
-.chroma .nx {
-  color: #e06c75;
-}
-.chroma .py {
-  color: #e06c75;
-}
-.chroma .nt {
-  color: #e06c75;
-}
-.chroma .nv {
-  color: #e06c75;
-}
-.chroma .vc {
-  color: #e06c75;
-}
-.chroma .vg {
-  color: #e06c75;
-}
-.chroma .vi {
-  color: #e06c75;
-}
-.chroma .vm {
-  color: #e06c75;
-}
-.chroma .s {
-  color: #98c379;
-}
-.chroma .sa {
-  color: #98c379;
-}
-.chroma .sb {
-  color: #98c379;
-}
-.chroma .sc {
-  color: #98c379;
-}
-.chroma .dl {
-  color: #98c379;
-}
-.chroma .sd {
-  color: #98c379;
-}
-.chroma .s2 {
-  color: #98c379;
-}
-.chroma .se {
-  color: #98c379;
-}
-.chroma .sh {
-  color: #98c379;
-}
-.chroma .si {
-  color: #98c379;
-}
-.chroma .sx {
-  color: #98c379;
-}
-.chroma .sr {
-  color: #98c379;
-}
-.chroma .s1 {
-  color: #98c379;
-}
-.chroma .ss {
-  color: #98c379;
-}
-.chroma .m {
-  color: #d19a66;
-}
-.chroma .mb {
-  color: #d19a66;
-}
-.chroma .mf {
-  color: #d19a66;
-}
-.chroma .mh {
-  color: #d19a66;
-}
-.chroma .mi {
-  color: #d19a66;
-}
-.chroma .il {
-  color: #d19a66;
-}
-.chroma .mo {
-  color: #d19a66;
-}
-.chroma .o {
-  color: #56b6c2;
-}
-.chroma .ow {
-  color: #56b6c2;
-}
-.chroma .c {
-  color: #7f848e;
-}
-.chroma .ch {
-  color: #7f848e;
-}
-.chroma .cm {
-  color: #7f848e;
-}
-.chroma .c1 {
-  color: #7f848e;
-}
-.chroma .cs {
-  color: #7f848e;
-}
-.chroma .cp {
-  color: #7f848e;
-}
-.chroma .cpf {
-  color: #7f848e;
+.hljs-link {
+    text-decoration: underline;
 }

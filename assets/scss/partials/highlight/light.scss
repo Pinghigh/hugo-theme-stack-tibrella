@@ -1,259 +1,71 @@
-/*
-*   Style: monokailight
-*   https://xyproto.github.io/splash/docs/monokailight.html
-*/
-
-.bg {
-  color: #272822;
-  background-color: #fafafa;
-}
-.chroma {
-  color: #272822;
-  background-color: #fafafa;
-}
-.chroma .err {
-  color: #960050;
-  background-color: #1e0010;
-}
-.chroma .lnlinks {
-  outline: none;
-  text-decoration: none;
-  color: inherit;
-}
-.chroma .lntd {
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-  border: 0;
-}
-.chroma .lntable {
-  border-spacing: 0;
-  padding: 0;
-  margin: 0;
-  border: 0;
-  width: 100%;
-  display: block;
-
-  > tbody {
+pre code.hljs {
     display: block;
-    width: 100%;
-    > tr {
-      display: flex;
-      width: 100%;
-      > td:last-child {
-        overflow-x: auto;
-      }
-    }
-  }
-}
-.chroma .hl {
-  background-color: #e1e1e1;
-}
-.chroma .lnt {
-  white-space: pre;
-  -webkit-user-select: none;
-  user-select: none;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  color: #7f7f7f;
-}
-.chroma .ln {
-  white-space: pre;
-  -webkit-user-select: none;
-  user-select: none;
-  margin-right: 0.4em;
-  padding: 0 0.4em 0 0.4em;
-  color: #7f7f7f;
-}
-.chroma .line {
-  display: flex;
-}
-.chroma .k {
-  color: #00a8c8;
-}
-.chroma .kc {
-  color: #00a8c8;
-}
-.chroma .kd {
-  color: #00a8c8;
-}
-.chroma .kn {
-  color: #f92672;
-}
-.chroma .kp {
-  color: #00a8c8;
-}
-.chroma .kr {
-  color: #00a8c8;
-}
-.chroma .kt {
-  color: #00a8c8;
-}
-.chroma .n {
-  color: #111111;
-}
-.chroma .na {
-  color: #75af00;
-}
-.chroma .nb {
-  color: #111111;
-}
-.chroma .bp {
-  color: #111111;
-}
-.chroma .nc {
-  color: #75af00;
-}
-.chroma .no {
-  color: #00a8c8;
-}
-.chroma .nd {
-  color: #75af00;
-}
-.chroma .ni {
-  color: #111111;
-}
-.chroma .ne {
-  color: #75af00;
-}
-.chroma .nf {
-  color: #75af00;
-}
-.chroma .fm {
-  color: #111111;
-}
-.chroma .nl {
-  color: #111111;
-}
-.chroma .nn {
-  color: #111111;
-}
-.chroma .nx {
-  color: #75af00;
-}
-.chroma .py {
-  color: #111111;
-}
-.chroma .nt {
-  color: #f92672;
-}
-.chroma .nv {
-  color: #111111;
-}
-.chroma .vc {
-  color: #111111;
-}
-.chroma .vg {
-  color: #111111;
-}
-.chroma .vi {
-  color: #111111;
-}
-.chroma .vm {
-  color: #111111;
-}
-.chroma .l {
-  color: #ae81ff;
-}
-.chroma .ld {
-  color: #d88200;
-}
-.chroma .s {
-  color: #d88200;
-}
-.chroma .sa {
-  color: #d88200;
-}
-.chroma .sb {
-  color: #d88200;
-}
-.chroma .sc {
-  color: #d88200;
-}
-.chroma .dl {
-  color: #d88200;
-}
-.chroma .sd {
-  color: #d88200;
-}
-.chroma .s2 {
-  color: #d88200;
-}
-.chroma .se {
-  color: #8045ff;
-}
-.chroma .sh {
-  color: #d88200;
-}
-.chroma .si {
-  color: #d88200;
-}
-.chroma .sx {
-  color: #d88200;
-}
-.chroma .sr {
-  color: #d88200;
-}
-.chroma .s1 {
-  color: #d88200;
-}
-.chroma .ss {
-  color: #d88200;
-}
-.chroma .m {
-  color: #ae81ff;
-}
-.chroma .mb {
-  color: #ae81ff;
-}
-.chroma .mf {
-  color: #ae81ff;
-}
-.chroma .mh {
-  color: #ae81ff;
-}
-.chroma .mi {
-  color: #ae81ff;
-}
-.chroma .il {
-  color: #ae81ff;
-}
-.chroma .mo {
-  color: #ae81ff;
-}
-.chroma .o {
-  color: #f92672;
-}
-.chroma .ow {
-  color: #f92672;
-}
-.chroma .p {
-  color: #111111;
-}
-.chroma .c {
-  color: #75715e;
-}
-.chroma .ch {
-  color: #75715e;
-}
-.chroma .cm {
-  color: #75715e;
-}
-.chroma .c1 {
-  color: #75715e;
-}
-.chroma .cs {
-  color: #75715e;
-}
-.chroma .cp {
-  color: #75715e;
-}
-.chroma .cpf {
-  color: #75715e;
-}
-.chroma .ge {
-  font-style: italic;
-}
-.chroma .gs {
-  font-weight: bold;
+    overflow-x: auto;
+    padding: 1em;
+}
+code.hljs {
+    padding: 3px 5px;
+}
+.hljs {
+    color: #383a42;
+    background: #fafafa;
+}
+.hljs-comment,
+.hljs-quote {
+    color: #a0a1a7;
+    font-style: italic;
+}
+.hljs-doctag,
+.hljs-formula,
+.hljs-keyword {
+    color: #a626a4;
+}
+.hljs-deletion,
+.hljs-name,
+.hljs-section,
+.hljs-selector-tag,
+.hljs-subst {
+    color: #e45649;
+}
+.hljs-literal {
+    color: #0184bb;
+}
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+    color: #50a14f;
+}
+.hljs-attr,
+.hljs-number,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-pseudo,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
+    color: #986801;
+}
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-symbol,
+.hljs-title {
+    color: #4078f2;
+}
+.hljs-built_in,
+.hljs-class .hljs-title,
+.hljs-title.class_ {
+    color: #c18401;
+}
+.hljs-emphasis {
+    font-style: italic;
+}
+.hljs-strong {
+    font-weight: 700;
+}
+.hljs-link {
+    text-decoration: underline;
 }

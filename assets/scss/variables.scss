@@ -45,10 +45,10 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
   --zh-font-family: "更纱黑体 SC", "PingFang SC", "Hiragino Sans GB",
     "Droid Sans Fallback", "Microsoft YaHei";
 
-  --base-font-family: "更纱黑体 SC", "PingFang SC", "Lato",
-    var(--sys-font-family), var(--zh-font-family), sans-serif;
-  --code-font-family: "JetbrainsMono Nerd Fonts", "Jetbrains Mono", Menlo,
-    Monaco, Consolas, "Courier New", monospace;
+  --base-font-family: sans-serif, "更纱黑体 SC", "PingFang SC", "Lato",
+    var(--sys-font-family), var(--zh-font-family);
+  --code-font-family: "JetbrainsMono Nerd Fonts", monospace, "Jetbrains Mono",
+    "FiraCode Nerd Font", "Fira Code", Menlo, Monaco, Consolas, "Courier New";
 }
 
 /*
